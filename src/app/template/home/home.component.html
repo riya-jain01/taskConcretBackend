@@ -1,0 +1,22 @@
+<header></header>
+
+<form [formGroup]="selectForm" (ngSubmit)="submit()">
+    <div class="row mrt">
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 form-group">
+        <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+        <select formControlName="country" class="form-control">
+            <option [ngValue]="null" selected> Select Country</option>
+            <option [ngValue]="country.value" *ngFor="let country of countries"> {{country.name}} </option>
+        </select>
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+        <select formControlName="category" class="form-control">
+            <option [ngValue]="null" selected> Select Category </option>
+            <option [ngValue]="category.value" *ngFor="let category of categories"> {{category.cname}} </option>
+        </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </div>
+</form>
+<router-outlet></router-outlet>
