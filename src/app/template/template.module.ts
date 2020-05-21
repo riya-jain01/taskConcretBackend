@@ -2,9 +2,10 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { TemplateRouting } from './template-routing';
+import { TemplateComponent } from './template.component';
 
 @NgModule({
-  declarations: [],
+  declarations: [TemplateComponent],
   imports: [
     CommonModule,
     TemplateRouting

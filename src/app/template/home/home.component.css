@@ -1,3 +1,36 @@
 .mrt {
-    margin-top: 50px;
+    margin-top: 98px;
 }  
+
+.example-card {
+    max-width: 325px;
+    margin-left: 40px;
+    margin-bottom: 50px;
+    float: left;
+}
+
+.mat-paginator .mat-paginator-outer-container {
+    margin-top:340px;
+}
+
+.mat-card-image {
+    height:183px;
+}
+/* 
+.truncate {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.content {
+    width:100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+} */
+  
+.example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+}

@@ -14,18 +14,23 @@ export class ApiService {
 
   getNews(formData:any) {
     console.log(BASE_URL);
-    return this.http.post(BASE_URL+'templatesVal',JSON.stringify(formData),this.getHeaders()).pipe(map(response => {
-        console.log("response");
-        console.log(response);
+    return this.http.post(BASE_URL+`getNewsByFilter`,JSON.stringify(formData),this.getHeaders()).pipe(map(response => {
       return response;
     }));
- }
+  }
 
- getHeaders() {
+  getContentByName(name:any) {
+    console.log(BASE_URL);
+    return this.http.get(BASE_URL+`getContent/${name}`).pipe(map(response => {
+      return response;
+    }));
+  }
+
+ private getHeaders() {
   const httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
-};
-return httpOptions;
-}
+  };
+    return httpOptions;
+  }
 
 }
